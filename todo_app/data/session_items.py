@@ -71,7 +71,8 @@ def save_item(item):
 
 def delete_item(id):
     """
- 
+    Deletes an item from the todo list
+     
     Args:
         id: The item is deleted
     """
