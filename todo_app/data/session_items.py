@@ -67,3 +67,18 @@ def save_item(item):
     session['items'] = updated_items
 
     return item
+
+
+def delete_item(id):
+    """
+    Deletes an item from the todo list
+     
+    Args:
+        id: The item is deleted
+    """
+    existing_items = get_items()
+    updated_items = [item for item in existing_items if item['id'] != int(id)]
+
+    session['items'] = updated_items
+
+        
