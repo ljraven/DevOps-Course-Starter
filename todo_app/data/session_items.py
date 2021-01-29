@@ -71,8 +71,8 @@ def save_item(item):
 
 def delete_item(id):
     """
-    Deletes an item from the todo list
-     
+    deletes an item in the session 
+
     Args:
         id: The item is deleted
     """
@@ -81,4 +81,3 @@ def delete_item(id):
 
     session['items'] = updated_items
 
-        

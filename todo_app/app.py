@@ -2,7 +2,6 @@ from flask import render_template, Flask, redirect, request
 from todo_app.data import session_items as session
 from todo_app.flask_config import Config
 
-
 app = Flask(__name__)
 app.config.from_object(Config)
 
@@ -42,14 +41,15 @@ def started_todo():
     session.save_item(item)
     return redirect("/")
 
-@app.route('/update-todo', methods=['POST'])
-def update_todo():
-    item = request.form.get('todo_id')
-    new_todo_value = request.form.get('title')
-    new_status_value = request.form.get('status')
-    session.update_item(item, new_todo_value, new_status_value)
+#update title
+@app.route('/update-title', methods=['POST'])
+def update_title():
+    todo_id = request.form.get('todo_id')
+    item = session.get_item(todo_id)
+    new_todo_title = request.form.get('title')
+    item['title'] = new_todo_title
+    session.save_item(item)
     return redirect('/')
-
 
 if __name__ == '__main__':
     app.run()

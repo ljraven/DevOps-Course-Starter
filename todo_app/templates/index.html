@@ -2,9 +2,9 @@
 {% block title %}Lindsey J Raven{% endblock %}
 
 {% block content %}
-  <div class="jumbotron" style=background-image:radial-gradient(yellow,pink,cyan)>
-    <h1 class="display-3 text-center" style="color:rgb(122, 4, 63)">Lindsey J Raven</h1>
-    <p class="lead text-center" style="color:rgb(83, 3, 66)">To-Do App</p>
+  <div class="jumbotron" style=background-image:linear-gradient(black,cyan,black)>
+    <h1 class="display-2 text-center" style="color:white; text-shadow: 2px 2px 4px #000000;">Lindsey J Raven</h1>
+    <p class="lead text-center" style="color:white">To-Do App</p>
   </div>
 
    <!-- ADD fORM -->
@@ -12,10 +12,10 @@
     <div class="col-md-12 text-center">
       <br/>
       <form action="/add-todo" method="POST">
-        <span style='font-size:25px;'>&#9997;</span>
-          <label style="color:#0e0d0d" for="name">Enter your to-do:</label>
+        <span style='font-size:30px;'>&#9997;</span>
+          <label style="color:#fdf7f7" for="name">Enter your to-do:</label>
           <input class="text-info" type="text" name="name" id="name">
-        <input class="text-info" type="submit" class="btn btn-dark btn-md" style="color:#35a2d4 !important" value="Submit">
+        <input class="text-info" type="submit" class="btn btn-dark btn-md" style="color:#35a2d4; box-shadow: 10px 10px 5px grey!important" value="Submit">
       </form>
     </div> 
 </div>
@@ -29,13 +29,13 @@
 
         {{todo.title}} </br>
 
-          <body style="height: 2000 px; background:linear-gradient(to top, #bcebfa 0%, #6d135c 100%);"></body>
+          <body style="height: 2000 px; background:linear-gradient(to top, cyan, #111111 100%);"></body>
             <span class="badge badge-warning" style="background-color:#aaeafa">{{todo.status}}</span>
             <div class="btn float-right" role="group" aria-label="item actions">     
             <!-- update button -->
 
           <button class="btn btn-float-center"></button>
-            <form action="/update-todo" method="post">
+            <form action="/update-title" method="post">
               <input type="hidden" name="todo_id" value="{{ todo.id }}"> 
               <input type="text" name="title" value="{{ todo.title }}" class="form-control">
               <input class="btn btn-info btn-sm float-left" type="submit" style="color:#fffdfe !important" value="Update"> 
