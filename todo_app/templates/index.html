@@ -27,7 +27,7 @@
          
         <li class="list-group-item"  style="color:lightblue">
 
-        {{todo.title}} </br>
+        {{todo.name}} </br>
 
           <body style="height: 2000 px; background:linear-gradient(to top, cyan, #111111 100%);"></body>
             <span class="badge badge-warning" style="background-color:#aaeafa">{{todo.status}}</span>
@@ -37,7 +37,7 @@
           <button class="btn btn-float-center"></button>
             <form action="/update-title" method="post">
               <input type="hidden" name="todo_id" value="{{ todo.id }}"> 
-              <input type="text" name="title" value="{{ todo.title }}" class="form-control">
+              <input type="text" name="title" value="{{ todo.name }}" class="form-control">
               <input class="btn btn-info btn-sm float-left" type="submit" style="color:#fffdfe !important" value="Update"> 
              </form> 
              </div>
