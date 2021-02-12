@@ -48,14 +48,14 @@
           <button class="btn btn-float-right">
           <form action="/started-todo" method="POST"> 
             <input type="hidden" name="todo_id" value='{{ todo.id }}'>
-            <input type="submit" class="btn btn-secondary btn-sm" style="background-color:#e2b1d9 !important" value="Started"> 
+            <input type="submit" class="btn btn-secondary btn-sm" style="background-color:#a3cae4 !important" value="Started"> 
           </form>  
         </button> 
            <!-- status update completed -->
         
           <form action="/complete-todo" method="POST">
             <input type="hidden" name="todo_id" value='{{ todo.id }}'>
-            <input type="submit" class="btn btn-dark btn-sm" style="background-color:#e4acca !important" value="Completed"> 
+            <input type="submit" class="btn btn-dark btn-sm" style="background-color:#68cae7 !important" value="Completed"> 
           </form>   
           
         
@@ -63,7 +63,7 @@
 
            <form action="/delete-todo" method="POST">
             <input type="hidden" name="todo_id" value='{{ todo.id }}'>
-              <input type="submit" class="btn btn-dark btn-sm" style="background-color:#111313" :#e4acca !important" value="Delete"> 
+              <input type="submit" class="btn btn-dark btn-sm" style="background-color:#138b8b" :#e4acca !important" value="Delete"> 
             </form>
            </div>
            

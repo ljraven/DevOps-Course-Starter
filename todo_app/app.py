@@ -1,5 +1,4 @@
 from flask import render_template, Flask, redirect, request
-from todo_app.data import session_items as session
 from todo_app.data import trello_api as trello
 from todo_app.flask_config import Config
 

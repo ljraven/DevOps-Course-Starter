@@ -4,11 +4,11 @@ import os
 def get_items():
     # This code sample uses the 'requests' library:
     # http://docs.python-requests.org
-    url = "https://api.trello.com/1/boards/os.getenv('TRELLO_BOARD_ID')/cards"
+    url = f"https://api.trello.com/1/boards/{os.getenv('TRELLO_BOARD_ID')}/cards"
 
     query = {
-    'key': 'os.getenv(TRELLO_KEY),
-    'token': 'os.getenv('TRELLO_TOKEN)'
+    'key': os.getenv('TRELLO_KEY'),
+    'token': os.getenv('TRELLO_TOKEN'),
     }
 
     response = requests.get(
